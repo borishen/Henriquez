@@ -1,0 +1,51 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+@model IEnumerable<ejemplo_de_listas.Models.Alumno>
+
+<h2>Lista</h2>
+<form action="Inicio/Estudia" method="post">
+    Nombre:
+    <input type="radio" name="BNombre" value="" /><br />
+    Materia:
+    <input type="radio" name="BMateria" value="BMateria" /><br />
+    Promedio:
+    <input type="radio" name="BPromedio" value="" /><br />
+
+    <input type="text" name="buscar" value="" />
+    <input type="submit" name="buscar" value="Buscar" />
+    <br /><br />
+
+</form>
+<table class="table-bordered">
+
+        @foreach (var item in Model)
+         {
+        <tbody>
+            <tr>
+                <th scope="row"></th>
+                <td>@Html.DisplayFor(modelItem => item.Carnet)</td>
+                <td>@Html.DisplayFor(modelItem => item.Materia)</td>
+                <td>@Html.DisplayFor(modelItem => item.Materia)</td>
+                <td>@Html.DisplayFor(modelItem => item.Fecha)</td>
+                <td>@Html.DisplayFor(modelItem => item.Promedio)</td>
+
+            </tr>
+        </tbody>
+         }
+    </table>
+
+@section.mostrarOcultar{ 
+<script type="text"/javascript"
+$(document).ready{
+function(){
+$("a").click(
+function(){
+$("ocultar".tongle();
+}
+};
+}
+
+};
+</script>
+}
